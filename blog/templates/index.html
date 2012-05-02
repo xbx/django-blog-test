@@ -1,0 +1,8 @@
+{% if latest_posts_list %}
+    {% for post in latest_posts_list %}
+    <h1><a href="/post/{{ post.title|safe }}/">{{ post.title }}</a></h1>
+    <p>{{ post.description }}</p>
+    {% endfor %}
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
